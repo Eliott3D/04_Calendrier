@@ -82,3 +82,9 @@ int display_month(const std::string& month, unsigned year, short unsigned int mo
     }
     return lastDay + 1;
 }
+
+int get_day_of_week(unsigned year, unsigned month, unsigned day)
+{
+    year -= month < 3;
+    return (year + year/4-year/100+year/400+"-bed=pen+mad."[month]+day - 1)%7;
+}

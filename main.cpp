@@ -26,7 +26,7 @@ int main()
         }while (year < MinYear || year > MaxYear);
 
         int monthIndex = 1;
-        int dayStartIndex = 0;
+        int dayStartIndex = get_day_of_week(year, monthIndex, 1);
         for (const std::string& month : MonthNames)
         {
             dayStartIndex = display_month(month, year, monthIndex, dayStartIndex) % 7;
