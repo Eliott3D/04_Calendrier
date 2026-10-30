@@ -80,7 +80,7 @@ int display_month(const std::string& month, unsigned year, short unsigned int mo
 
         std::cout << std::endl;
     }
-    return lastDay + 1;
+    return lastDay;
 }
 
 int get_day_of_week(unsigned year, unsigned month, unsigned day)

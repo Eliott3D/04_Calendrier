@@ -29,7 +29,7 @@ int main()
         int dayStartIndex = get_day_of_week(year, monthIndex, 1);
         for (const std::string& month : MonthNames)
         {
-            dayStartIndex = display_month(month, year, monthIndex, dayStartIndex) % 7;
+            dayStartIndex = (display_month(month, year, monthIndex, dayStartIndex) + 1) % 7;
             monthIndex++;
         }
 
