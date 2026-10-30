@@ -1,4 +1,5 @@
-//
+///Eliott Deriaz
+///30.10.2026
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -34,22 +35,22 @@ int main()
         }
 
         //ASK RETRY
-        const char continueAns = 'O';
-        const char exitAns = 'N';
+        const char ContinueAns = 'O';
+        const char ExitAns = 'N';
         char ans;
 
         do
         {
-            std::cout << "voulez-vous continuer [" << continueAns << "|" << exitAns << "]: ";
+            std::cout << "voulez-vous continuer [" << ContinueAns << "|" << ExitAns << "]: ";
             std::cin >> ans;
 
             switch (ans)
             {
-                case exitAns: retry = false; break;
-            case continueAns: retry = true; break;
+                case ExitAns: retry = false; break;
+            case ContinueAns: retry = true; break;
             }
 
-        }while (ans != continueAns && exitAns != exitAns);
+        }while (ans != ContinueAns && ans != ExitAns);
 
     }
     while (retry);
